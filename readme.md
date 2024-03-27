@@ -59,3 +59,16 @@ sh run_stage2.sh
 ```
 bash tools/dist_test.sh ./configs/textrecog/icl_ocr/S-stage2.py 'STAGE2-CHECKPOINT-PATH' 8
 ```
+
+## Citation
+
+If you find our models / code / papers useful in your research, please consider giving stars ⭐ and citations 📝
+
+```
+@article{zhao2023multi,
+  title={Multi-modal In-Context Learning Makes an Ego-evolving Scene Text Recognizer},
+  author={Zhao, Zhen and Huang, Can and Wu, Binghong and Lin, Chunhui and Liu, Hao and Zhang, Zhizhong and Tan, Xin and Tang, Jingqun and Xie, Yuan},
+  journal={CVPR},
+  year={2024}
+}
+```
