@@ -5,7 +5,6 @@ from typing import Dict, Optional, Sequence, Union
 
 import mmengine
 from mmengine.evaluator import BaseMetric
-from rapidfuzz.distance import Levenshtein
 
 from mmocr.registry import METRICS
 
@@ -265,7 +264,7 @@ class OneMinusNEDMetric(BaseMetric):
             pred_text_lower = pred_text.lower()
             gt_text_lower_ignore = self.valid_symbol.sub('', gt_text_lower)
             pred_text_lower_ignore = self.valid_symbol.sub('', pred_text_lower)
-            norm_ed = Levenshtein.normalized_distance(pred_text_lower_ignore,
+            norm_ed = edit_distance.normalized_distance(pred_text_lower_ignore,
                                                       gt_text_lower_ignore)
             result = dict(norm_ed=norm_ed)
             self.results.append(result)
